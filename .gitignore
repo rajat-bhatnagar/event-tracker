@@ -123,3 +123,6 @@ Temporary Items
 
 .idea/**
 *.iml
+
+.classpath
+.project
