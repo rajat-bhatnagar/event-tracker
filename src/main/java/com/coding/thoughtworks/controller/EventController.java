@@ -15,9 +15,6 @@ public class EventController {
 		Event event = new Event();
 		event.setName("Java User Group");
 		model.addAttribute("event", event);
-	
 		return "event";
 	}
-	
-	
 }
