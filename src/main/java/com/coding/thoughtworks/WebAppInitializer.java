@@ -19,6 +19,8 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		ServletRegistration.Dynamic dispatcher = servletContext.addServlet("DispatcherServlet", new DispatcherServlet(context));
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("*.html");
+		//Add mapping for the pdf
+		dispatcher.addMapping("*.pdf");
 	}
 
 	private AnnotationConfigWebApplicationContext getContext() {
