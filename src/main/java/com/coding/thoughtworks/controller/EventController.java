@@ -7,10 +7,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.coding.thoughtworks.model.Event;
 
+/*
+ * This will bind the value of our @ModelAttribute event to the session
+ * and can be validated by looking at the redirect to the index.jsp from event.jsp view
+ */
+
 @Controller
+@SessionAttributes("event")
 public class EventController {
 	
 	private static final Logger logger = Logger.getLogger(EventController.class.getName());
@@ -32,4 +39,9 @@ public class EventController {
 		 */
 		return "redirect:index.html";
 	}
+	
+	@ModelAttribute("event")
+    public Event getEvent() {
+        return new Event();
+    }
 }
