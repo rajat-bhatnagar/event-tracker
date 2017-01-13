@@ -13,7 +13,7 @@
 		Add Event >>
 	</a>
 	<br/>
-	<a href="atendee.html">
+	<a href="attendee.html">
 		Add Attendee >>
 	</a>
 </body>
