@@ -24,6 +24,11 @@ public class AttendeeController {
 		return "attendee";
 	}
 	
+	/*
+	 * The signature has to be in this order , else it would not work
+	 * If BindingResult has any failures diue to failed validations done by Annotations in model
+	 * redirect the user to the same page
+	 */
 	@RequestMapping(value="/attendee", method=RequestMethod.POST)
 	public String processAttendee(@Valid Attendee attendee, BindingResult result, Model model){
 		logger.info("Attendee # "+attendee);
