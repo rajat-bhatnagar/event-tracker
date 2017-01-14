@@ -8,7 +8,6 @@ import com.coding.thoughtworks.Annotation.Phone;
 public class PhoneConstraintValidator implements ConstraintValidator<Phone, String>{
 	
 	public void initialize(Phone phone) {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
