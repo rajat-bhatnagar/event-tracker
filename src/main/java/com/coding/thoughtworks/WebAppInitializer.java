@@ -21,6 +21,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		dispatcher.addMapping("*.html");
 		//Add mapping for the pdf
 		dispatcher.addMapping("*.pdf");
+		dispatcher.addMapping("*.json");
 	}
 
 	private AnnotationConfigWebApplicationContext getContext() {
